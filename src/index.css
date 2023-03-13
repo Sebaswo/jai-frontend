@@ -1,0 +1,304 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+body {
+  background: #f1f1f1;
+  margin: 0;
+  font-family: "Poppins";
+  animation: varinvaihto 10s infinite;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+        -45deg, 
+        rgb(255, 255, 255) 0%, 
+        rgb(151, 151, 151) 25%, 
+        rgb(62, 101, 69) 51%, 
+        rgb(3, 6, 4) 100%
+  );
+  animation: vaihto 20s ease infinite;
+}
+
+@keyframes vaihto { 
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+@keyframes varinvaihto {
+  0% {background-color: #7c7c7c;}
+  50% {background-color: #4c4c4c;}
+  100% {background-color: #7c7c7c;}
+}
+
+header {
+  background: #fff;
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: #333;
+  text-decoration: none;
+}
+.pages{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* homepage */
+.home {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 100px;
+}
+.workout-details {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+.workout-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+.workout-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+.workout-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+.workouts h3 {
+  color: white;
+}
+
+/* new workout form */
+label, input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+input.error {
+  border: 1px solid var(--error);
+}
+
+/* search menu */
+
+.dropdown {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+}
+
+.dropdown:empty {
+  border: none;
+}
+
+.dropdown-row {
+  cursor: pointer;
+  text-align: start;
+  margin: 2px 0;
+}
+
+.search {
+  display: flex;
+}
+
+.search p {
+  margin-right: 5px;
+}
+
+.search button {
+  border: 0;
+  margin: 5px;
+  padding: 10px;
+  max-height: 40px;
+}
+
+.search-container div {
+  margin: 0px
+}
+
+.search input {
+  margin: 0px;
+  font-size: 20px;
+  padding: 0px;
+}
+
+.search-container p {
+  color: white;
+}
+
+nav span {
+  margin: 20px;
+}
+
+nav button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 5px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+button:hover {
+  background-color: #138061;
+  transition: 0.3s
+}
+
+/* .fog {
+  background:url(img/fog.png);
+} */
+
+/* .sumu-img-eka {
+  background: url("img/sumu1.png");
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: center;
+  animation: marquee 60s linear infinite;
+} */
+
+@keyframes sumu {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-200vw, 0, 0);
+  }
+}
+
+.search input {
+  padding: 3px;
+  font-size: 17px;
+}
+
+.dropdown-row {
+  padding: 3px;
+  font-size: 17px;
+}
+
+.search-container p {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.create label p {
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.create label input {
+  height: 28px;
+  padding: 3px;
+  margin: 0px;
+  width: 50px;
+}
+
+.create label button {
+  margin-top: 40px;
+}
+
+.workouts h3 {
+  font-size: 25px;
+}
+
+.signup h3, label {
+  color: white;
+}
+
+.login h3, label {
+  color: white;
+}
+
+.login {
+  text-align: center;
+}
+
+.login input {
+  width: 200px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.signup {
+  text-align: center;
+}
+
+.signup input {
+  width: 200px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+footer {
+  font-size: 10px;
+  color: white;
+  bottom: 0;
+  left: 50%;
+  margin-top: 5px;
+}
+
+.workouts {
+  height: 500px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.workout-details {
+  margin-right: 5px;
+}
